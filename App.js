@@ -1,13 +1,28 @@
-import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import {LinearGradient} from 'expo';
+import React from "react";
+import { StyleSheet, Text, View } from "react-native";
+import { StatusBar } from "react-native";
+import { Header } from "react-native-elements";
+import { LinearGradient } from "expo";
+import HeaderWithAction from "./components/HeaderWithAction";
 
 export default class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <LinearGradient colors={["#FF0000", "#00FF00"]} style={[styles.box]}>
+        <LinearGradient colors={["#515362", "#2e2d3b"]} style={[styles.box]}>
+          <Header
+            backgroundColor={"transparent"}
+            outerContainerStyles={{
+              backgroundColor: "transparent",
+              borderBottomWidth: 0,
+              alignContent: "center",
+              justifyContent: "space-between"
+            }}
+            leftComponent={{ icon: "menu", color: "#dedee5" }}
+            rightComponent={{ icon: "home", color: "#dedee5" }}
+          />
 
+          <HeaderWithAction title="Cards"/>
         </LinearGradient>
       </View>
     );
@@ -17,8 +32,11 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
+    alignItems: "center",
+    justifyContent: "center"
+  },
+  headerText: {
+    fontSize: 20
   },
   box: {
     position: "absolute",
