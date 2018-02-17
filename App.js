@@ -21,12 +21,30 @@ export default class App extends React.Component {
             }}
             leftComponent={{ icon: "menu", color: "#dedee5" }}
             rightComponent={{ icon: "home", color: "#dedee5" }}
-          />
-          <ScrollView>
-            <HeaderWithAction title="Cards" />
+          />            
+          
+          <HeaderWithAction title="Cards"/>
+
+          <ScrollView horizontal styles={[styles.cardContainer]}>
             <CreditCard
               number="**** **** **** 7427"
               holder="Bryan Baker"
+              expiry="03/20/2017"
+            />
+            <CreditCard
+              number="**** **** **** 5512"
+              holder="Homer Simpson"
+              expiry="03/20/2017"
+            />
+    
+            <CreditCard
+              number="**** **** **** 6136"
+              holder="Tom Spacey"
+              expiry="03/20/2017"
+            />
+            <CreditCard
+              number="**** **** **** 1348"
+              holder="Clyve Barker"
               expiry="03/20/2017"
             />
           </ScrollView>
@@ -39,8 +57,14 @@ export default class App extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    alignItems: "center",
-    justifyContent: "center"
+    flexDirection: 'column',
+    alignItems: "flex-start",
+    justifyContent: "flex-start"
+  },
+  cardContainer:{
+    alignItems: "flex-start",
+    justifyContent: "center",
+    overflow: 'hidden'
   },
   headerText: {
     fontSize: 20
