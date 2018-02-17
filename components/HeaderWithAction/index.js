@@ -7,10 +7,8 @@ export default class extends React.Component {
     const { container, header } = styles;
     const { title } = this.props;
     return (
-      <View style={[styles.container]}>
-        <Text color="#ffffff" style={[styles.header]}>
-          {title}
-        </Text>
+      <View style={[container]}>
+        <Text color="#ffffff" style={[header]}>{title}</Text>
         <Icon
           raised
           name="plus"
