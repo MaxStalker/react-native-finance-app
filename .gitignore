@@ -1,5 +1,8 @@
 # See https://help.github.com/ignore-files/ for more about ignoring files.
 
+#WebStorm folders
+.idea/*
+
 # expo
 .expo/
 
@@ -12,6 +15,5 @@
 .env.test.local
 .env.production.local
 
-npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
