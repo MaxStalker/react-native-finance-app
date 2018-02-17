@@ -1,9 +1,10 @@
 import React from "react";
 import { StyleSheet, Text, View } from "react-native";
-import { StatusBar } from "react-native";
+import { StatusBar, ScrollView } from "react-native";
 import { Header } from "react-native-elements";
 import { LinearGradient } from "expo";
 import HeaderWithAction from "./components/HeaderWithAction";
+import CreditCard from "./components/CreditCard";
 
 export default class App extends React.Component {
   render() {
@@ -21,8 +22,14 @@ export default class App extends React.Component {
             leftComponent={{ icon: "menu", color: "#dedee5" }}
             rightComponent={{ icon: "home", color: "#dedee5" }}
           />
-
-          <HeaderWithAction title="Cards"/>
+          <ScrollView>
+            <HeaderWithAction title="Cards" />
+            <CreditCard
+              number="**** **** **** 7427"
+              holder="Bryan Baker"
+              expiry="03/20/2017"
+            />
+          </ScrollView>
         </LinearGradient>
       </View>
     );
