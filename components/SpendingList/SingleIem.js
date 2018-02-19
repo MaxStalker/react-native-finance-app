@@ -7,7 +7,6 @@ import TimelineChain from '../TimelineChain';
 export default class SingleIem extends Component {
 	render() {
 		const { name, time, date, value, change, index} = this.props;
-		console.log(index);
 		return (
 			<Row justify={'flex-start'}>
 				<TimelineChain number={index}/>
