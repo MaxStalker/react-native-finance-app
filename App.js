@@ -14,7 +14,11 @@ export default class App extends React.Component {
 		return (
 			<View style={styles.container}>
 				<LinearGradient colors={['#515362', '#2e2d3b']} style={[styles.box]}>
-					{mode === 'card-view' ? <CardView /> : <StatsView />}
+					{mode === 'card-view' ? (
+						<CardView action={() => this.setState({ mode: 'stats-view' })} />
+					) : (
+						<StatsView action={() => this.setState({ mode: 'card-view' })} />
+					)}
 				</LinearGradient>
 			</View>
 		);
