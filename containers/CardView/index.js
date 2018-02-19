@@ -7,6 +7,7 @@ import { Header } from 'react-native-elements';
 
 export default class CardView extends Component {
 	render() {
+		const { action } = this.props;
 		return (
 			<Container>
 				<Header
@@ -17,7 +18,11 @@ export default class CardView extends Component {
 						alignContent: 'center',
 						justifyContent: 'space-between'
 					}}
-					leftComponent={{ icon: 'menu', color: '#dedee5' }}
+					leftComponent={{
+						icon: 'menu',
+						color: '#dedee5',
+						onPress: () => action()
+					}}
 					rightComponent={{ icon: 'home', color: '#dedee5' }}
 				/>
 

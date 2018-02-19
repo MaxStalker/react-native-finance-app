@@ -21,6 +21,7 @@ export default class CardView extends Component {
 		this.setState({ active: id });
 	}
 	render() {
+		const { action } = this.props;
 		const { active } = this.state;
 		const values = items[1].cashFlow;
 		return (
@@ -33,7 +34,11 @@ export default class CardView extends Component {
 						alignContent: 'center',
 						justifyContent: 'space-between'
 					}}
-					leftComponent={{ icon: 'menu', color: '#dedee5' }}
+					leftComponent={{
+						icon: 'menu',
+						color: '#dedee5',
+						onPress: () => action()
+					}}
 					rightComponent={{ icon: 'home', color: '#dedee5' }}
 				/>
 
