@@ -3,6 +3,7 @@ import { View, Text, TouchableWithoutFeedback } from 'react-native';
 import { LinearGradient } from 'expo';
 
 import styled from 'styled-components';
+import {TRANSPARENT_GREY} from "../../theme/colors";
 
 const containerHeight = 200;
 
@@ -15,7 +16,7 @@ export const ItemContainer = styled.View`
 	flex-direction: column;
 	align-items: center;
 	justify-content: space-between;
-	border-color: rgba(150, 150, 150, 0.25);
+	border-color: ${TRANSPARENT_GREY};
 	border-width: 0;
 	border-right-width: 1;
 `;
